@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
@@ -11,26 +11,28 @@
     background-color: #fff;
     color: white;
     height: 30px
-
 }
 
 .first-meni i {
-list-style: none;
-font-size: 24px; /* Veličina ikonica */
-    margin-right: 10px; /* Razmak između ikonica */
+    list-style: none;
+    font-size: 24px;
+    /* Veličina ikonica */
+    margin-right: 10px;
+    /* Razmak između ikonica */
     padding-top: 10px
+}
 
-   }
+/* Stilizacija linkova ikonica */
+.first-meni a {
+    color: #707374;
+    /* Boja ikonica */
+    text-decoration: none;
+    /* Uklanja podvučenost linkova */
+}
 
-   /* Stilizacija linkova ikonica */
-   .first-meni a {
-       color: #707374; /* Boja ikonica */
-       text-decoration: none; /* Uklanja podvučenost linkova */
-   }
-
- .first-meni li {
- display: inline-block;
- }
+.first-meni li {
+    display: inline-block;
+}
 
 
 .pre-header .first-meni {
@@ -50,61 +52,96 @@ font-size: 24px; /* Veličina ikonica */
 /* MAIN MENI */
 
 .main-nav .main-meni {
-list-style: none;
-margin-top: 10px;
+    list-style: none;
+    margin-top: 10px;
 }
 
 .main-nav .main-meni li {
-display: inline-block;
-margin-left: 20px;
+    display: inline-block;
+    margin-left: 20px;
 }
 
 .main-nav .main-meni li a {
-text-decoration: none;
-color: #000;
+    text-decoration: none;
+    color: #000;
 }
 
 .main-nav img {
-margin-top: 0px;
+    margin-top: 0px;
 }
 
 .main-nav .main-meni .contact-button a {
-background-color: red;
-padding: 8px;
-color: #fff;
-transition: 0.2s;
+    background-color: red;
+    padding: 8px;
+    color: #fff;
+    transition: 0.2s;
 }
 
-.main-nav .main-meni .contact-button a:hover{
-color: fff;
-background-color: #A52A2A;
+.main-nav .main-meni .contact-button a:hover {
+    color: fff;
+    background-color: #A52A2A;
 }
 
 
 /* BANNER SECTION */
 
 .hero-section {
-background-image: url('../image/banner.jpg');
-padding-top: 110px;
-padding-bottom: 115px;
-background-size: cover;
+    background-image: url('../image/banner.jpg');
+    padding-top: 110px;
+    padding-bottom: 115px;
+    background-size: cover;
 }
 
 .hero-section h1 {
-font-size: 70px;
-padding-bottom: 30px
+    font-size: 70px;
+    padding-bottom: 30px
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        position: relative;
+        background-image: url('../image/banner - phone.jpg');                      
+    }
+}
+
+@media (max-width: 768px) {   
+    .hero-section {
+        position: relative;
+        background-image: url('../image/banner - phone2.jpg');
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-size: cover;              
+    }
+
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.4); /* Color de fondo con opacidad 0.7 */
+        z-index: 0; /* Coloca el pseudo-elemento detrás del contenido */
+    }
+
+    .hero-section h1 {
+        font-size: 50px;
+        padding-bottom: 10px;
+        /* color:white */
+    }
+  
 }
 
 /* OUR CLIENTS */
 
 .client-section h3 {
- text-align: center;
- padding-top: 25px;
- padding-bottom: 25px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .client-section .col-md-4 img {
-max-width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -132,49 +169,70 @@ max-width: 100%;
 
 
 .card-container {
-    background-color: #f0f0f0; /* Siva pozadina */
-    padding: 30px !important; /* Povećava odmak unutar okvira liste */
-    border: none !important; /* Uklanja ivice okvira i koristi !important kako bi osigurali prioritet stilizacije */
-    box-shadow: none !important; /* Uklanja sjenu okvira i koristi !important kako bi osigurali prioritet stilizacije */
+    background-color: #f0f0f0;
+    /* Siva pozadina */
+    padding: 30px !important;
+    /* Povećava odmak unutar okvira liste */
+    border: none !important;
+    /* Uklanja ivice okvira i koristi !important kako bi osigurali prioritet stilizacije */
+    box-shadow: none !important;
+    /* Uklanja sjenu okvira i koristi !important kako bi osigurali prioritet stilizacije */
 
 }
 
 
 
 .card-container .card {
-    margin-bottom: 10px; /* Razmak između kartica */
+    margin-bottom: 10px;
+    /* Razmak između kartica */
 }
+
 .siva-pozadina {
-    background-color: #fafafa; /* Siva pozadina */
-    padding: 20px; /* Dodajte padding po potrebi */
+    background-color: #fafafa;
+    /* Siva pozadina */
+    padding: 20px;
+    /* Dodajte padding po potrebi */
 }
+
 .card-header {
     /*background-color: #fff !important; /* Bijela pozadina za okvire naziva */
-        background-color: transparent !important; /* Uklanja pozadinu okvira naziva */
-            border-bottom: none !important; /* Uklanja donju granicu u zaglavlju kartice */
+    background-color: transparent !important;
+    /* Uklanja pozadinu okvira naziva */
+    border-bottom: none !important;
+    /* Uklanja donju granicu u zaglavlju kartice */
 }
 
 .card {
-    margin-bottom: 7px; /* Razmak između kartica */
-    border: none !important; /* Uklanja ivice kartica */
-        padding: 20px; /* Povećava odmak unutar kartice */
+    margin-bottom: 7px;
+    /* Razmak između kartica */
+    border: none !important;
+    /* Uklanja ivice kartica */
+    padding: 20px;
+    /* Povećava odmak unutar kartice */
 }
 
 
 
 .naslov {
-    margin: 10px 0; /* Odmak od gornje i donje strane naslova */
-    padding: 40px; /* Odmak od sive ivice */
-        margin-bottom: 40px; /* Odmak ispod naslova i iznad liste */
-  /*  background-color: #f0f0f0; /* Siva pozadina */
-    border-radius: 10px; /* Zaobljeni rubovi */
+    margin: 10px 0;
+    /* Odmak od gornje i donje strane naslova */
+    padding: 40px;
+    /* Odmak od sive ivice */
+    margin-bottom: 40px;
+    /* Odmak ispod naslova i iznad liste */
+    /*  background-color: #f0f0f0; /* Siva pozadina */
+    border-radius: 10px;
+    /* Zaobljeni rubovi */
     text-align: center;
 }
 
 .naslov h2 {
-    margin: 0; /* Uklanja dodatni prostor oko naslova */
-        text-transform: uppercase; /* Pretvara tekst u velika slova */
-            margin: 0; /* Uklanja dodatni prostor oko naslova */
+    margin: 0;
+    /* Uklanja dodatni prostor oko naslova */
+    text-transform: uppercase;
+    /* Pretvara tekst u velika slova */
+    margin: 0;
+    /* Uklanja dodatni prostor oko naslova */
 }
 
 
@@ -185,8 +243,8 @@ max-width: 100%;
 }
 
 .novi-naslov p {
-text-align: center;
-padding-bottom: 40px;
+    text-align: center;
+    padding-bottom: 40px;
 }
 
 
@@ -195,21 +253,28 @@ padding-bottom: 40px;
 
 /* Stil za sekciju kontakt forme */
 .contact-section {
-    background-color: #007BFF; /* Plava pozadina sekcije */
-    padding: 40px 0; /* Odmak od gornjeg i donjeg dela sekcije */
-    color: #fff; /* Boja teksta */
+    background-color: #007BFF;
+    /* Plava pozadina sekcije */
+    padding: 40px 0;
+    /* Odmak od gornjeg i donjeg dela sekcije */
+    color: #fff;
+    /* Boja teksta */
 }
 
 /* Stil za formu */
 .contact-section form {
-    background-color: #fff; /* Bijela pozadina forme */
-    padding: 20px; /* Odmak unutar forme */
-    border-radius: 10px; /* Zaobljeni rubovi forme */
+    background-color: #fff;
+    /* Bijela pozadina forme */
+    padding: 20px;
+    /* Odmak unutar forme */
+    border-radius: 10px;
+    /* Zaobljeni rubovi forme */
 }
 
 /* Stil za naslov forme */
 .contact-section h4 {
-    color: #fff; /* Boja teksta za naslov */
+    color: #fff;
+    /* Boja teksta za naslov */
 }
 
 /* Stil za input polja u formi */
@@ -220,14 +285,18 @@ padding-bottom: 40px;
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc; /* Siva ivica oko input polja */
-    border-radius: 5px; /* Zaobljeni rubovi input polja */
+    border: 1px solid #ccc;
+    /* Siva ivica oko input polja */
+    border-radius: 5px;
+    /* Zaobljeni rubovi input polja */
 }
 
 /* Stil za dugme za slanje forme */
 .contact-section button[type="submit"] {
-    background-color: #007BFF; /* Plava pozadina dugmeta */
-    color: #fff; /* Boja teksta na dugmetu */
+    background-color: #007BFF;
+    /* Plava pozadina dugmeta */
+    color: #fff;
+    /* Boja teksta na dugmetu */
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -237,7 +306,8 @@ padding-bottom: 40px;
 
 /* Stil za dugme za slanje forme na hover */
 .contact-section button[type="submit"]:hover {
-    background-color: #0056b3; /* Tamnija plava boja na hover */
+    background-color: #0056b3;
+    /* Tamnija plava boja na hover */
 }
 
 
@@ -276,17 +346,18 @@ padding-bottom: 40px;
 }
 
 .project-images {
-   /* display: none; */
-   text-align: center;
+    /* display: none; */
+    text-align: center;
     margin-top: 20px;
 }
 
 .project-images img {
     max-width: 100%;
     height: auto;
-        margin-bottom: 10px; /* Dodaje razmak između slika */
+    margin-bottom: 10px;
+    /* Dodaje razmak između slika */
 }
 
 .project h2 {
-text-align: center;
+    text-align: center;
 }
