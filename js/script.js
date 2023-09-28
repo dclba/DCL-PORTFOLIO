@@ -126,3 +126,48 @@ document.addEventListener('DOMContentLoaded', function () {
      });
 
 */
+
+
+
+$(document).ready(function() {
+    var batchSize = 3; // Broj klijenata koje se prikazuju odjednom
+
+    // Sakrij sve klijente osim prvih `batchSize` klijenata
+    $('.col-md-4:gt(' + (batchSize - 1) + ')').hide();
+
+    // Provjerite ima li više klijenata za prikaz
+    if ($('.col-md-4').length > batchSize) {
+        $('#showMoreButton').show(); // Prikažite dugme "Prikaži više" ako ima više klijenata
+    } else {
+        $('#showMoreButton').hide(); // Inače sakrijte dugme "Prikaži više"
+        $('#showLessButton').hide(); // Inače sakrijte dugme "Prikaži manje" ako nema više klijenata
+    }
+
+    // Klik na dugme "Prikaži više"
+    $('#showMoreButton').on('click', function() {
+        // Prikazujemo narednih `batchSize` klijenata
+        var hiddenClients = $('.col-md-4:hidden');
+        for (var i = 0; i < batchSize && i < hiddenClients.length; i++) {
+            $(hiddenClients[i]).slideDown();
+        }
+
+        // Sakrijemo dugme "Prikaži više" ako nema više klijenata za prikaz
+        if ($('.col-md-4:hidden').length === 0) {
+            $('#showMoreButton').hide();
+            $('#showLessButton').show(); // Prikažemo dugme "Prikaži manje"
+        }
+    });
+
+    // Klik na dugme "Prikaži manje"
+    $('#showLessButton').on('click', function() {
+        // Sakrijemo sve klijente osim prvih `batchSize` klijenata
+        var visibleClients = $('.col-md-4:gt(' + (batchSize - 1) + ')');
+        visibleClients.slideUp();
+
+        // Prikažemo dugme "Prikaži više" i sakrijemo dugme "Prikaži manje"
+        $('#showMoreButton').show();
+        $('#showLessButton').hide();
+    });
+});
+
+

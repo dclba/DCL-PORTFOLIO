@@ -104,7 +104,8 @@
     }
 }
 
-@media (max-width: 768px) {   
+@media (max-width: 768px) {
+
     .hero-section {
         position: relative;
         background-image: url('../image/banner - phone2.jpg');
@@ -112,6 +113,8 @@
         padding-bottom: 80px;
         background-size: cover;              
     }
+
+
 
     .hero-section::before {
         content: "";
@@ -366,3 +369,22 @@
 .details {
     display: none;
 }
+
+
+/* our clients show more button */
+/* Stil za dugme "Prikaži više" */
+.show-more-button {
+    margin-top: 20px; /* Pomeranje dugmeta prema dole */
+    background-color: transparent !important; /* Transparentna pozadina dugmeta */
+    color: #000 !important; /* Crna boja teksta dugmeta */
+    border: none !important; /* Uklanjanje okvira dugmeta */
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Stil za dugme "Prikaži više" na hover */
+.show-more-button:hover {
+    background-color: transparent !important; /* Transparentna pozadina na hover */
+    color: #007BFF !important; /* Plava boja teksta na hover */
+}
+
